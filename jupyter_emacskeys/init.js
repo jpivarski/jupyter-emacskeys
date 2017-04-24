@@ -12,6 +12,11 @@ define([
 
         if (!extraKeys["Enter"]) extraKeys["Enter"] = "newlineAndIndent";
 
+        delete extraKeys["Alt-V"];
+        delete extraKeys["Ctrl-V"];
+        extraKeys["Alt-H"] = "delWordBefore";
+        extraKeys["Shift-Ctrl-Z"] = "redo";
+
         // override Ctrl-Y to not select the whole line, because I
         // don't like that feature
         var ctrl_y_super = extraKeys["Ctrl-Y"];
